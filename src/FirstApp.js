@@ -1,11 +1,18 @@
 import React from "react";
-const FirstApp = ({ wave }) => {
+import PropTypes from "prop-types";
+const FirstApp = ({ wave, subtitle }) => {
   return (
     <>
       <h1>{wave}</h1>
-      <p>My first app</p>
+      <p>{subtitle}</p>
     </>
   );
 };
 
+FirstApp.propTypes = {
+  wave: PropTypes.string.isRequired,
+};
+FirstApp.defaultProps = {
+  subtitle: "I'm subtitle",
+};
 export default FirstApp;
